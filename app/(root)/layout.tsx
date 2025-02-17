@@ -1,6 +1,6 @@
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
     return (
-        <div>
+        <div className="text-2xl">
             {children}
         </div>
     );
