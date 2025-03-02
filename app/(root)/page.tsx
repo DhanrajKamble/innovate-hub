@@ -12,10 +12,10 @@ const MainPage = () => {
 
         <Boxes />
         <h1 className="heading relative">
-          Tailwind is Awesome
+          Welcome To Innovate Hub
         </h1>
         <p className="sub-heading !max-w-3xl relative">
-          Framer motion is the best animation library ngl
+          Where project meet like minded people
         </p>
 
         <SearchForm /> 
