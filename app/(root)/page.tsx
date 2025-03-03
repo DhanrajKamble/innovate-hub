@@ -29,8 +29,6 @@ const MainPage = () => {
           [
             {'id': 123, 'title': 'A NEW PROJECT', 'desc': 'A GREATE DESCRIP'},
             {'id': 123, 'title': 'A NEW PROJECT', 'desc': 'A GREATE DESCRIP'},
-            {'id': 123, 'title': 'A NEW PROJECT', 'desc': 'A GREATE DESCRIP'},
-            {'id': 123, 'title': 'A NEW PROJECT', 'desc': 'A GREATE DESCRIP'},
             {'id': 123, 'title': 'A NEW PROJECT', 'desc': 'A GREATE DESCRIP'}
 
           ].map((item, index) => (
