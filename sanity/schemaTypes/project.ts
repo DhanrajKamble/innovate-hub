@@ -42,7 +42,7 @@ export const project = defineType({
         }),
         defineField({
             name: 'details',
-            type:'markdown',
+            type: 'markdown',
         }),
     ]
 })
