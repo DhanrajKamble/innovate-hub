@@ -1,8 +1,9 @@
 import React from 'react'
 import Form from 'next/form'
 import { SearchIcon } from 'lucide-react';
+import SearchFormReset from './SearchFormReset';
 
-const SearchForm = () => {
+const SearchForm = ({query} : {query?: string}) => {
   return (
     <Form 
         action="/"
@@ -11,10 +12,8 @@ const SearchForm = () => {
     >
         <input type='text' name='query' defaultValue="" className='search-input' placeholder='Search Projects.....'/>
         <div className='flex gap-2'>
-            {true && (
-                <div>
-                    Reset
-                </div>
+            {query && (
+                <SearchFormReset />
             )}
             <button type='submit' className='search-btn text-white'> 
                 <SearchIcon className='size-5' />
