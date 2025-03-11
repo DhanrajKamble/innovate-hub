@@ -1,4 +1,5 @@
 import { auth } from '@/auth';
+import { ProjectTypeCard } from '@/components/ProjectCard';
 import SearchForm from '@/components/SearchForm';
 import { Boxes } from '@/components/ui/background-boxes';
 import { ThreeDCardDemo } from '@/components/ui/ThreeDCard';
@@ -10,7 +11,7 @@ import React from 'react'
 export default async function Home({searchParam} : {
   searchParam : Promise<{query ? :string}>
 }) {
-  const query = (await searchParam).query;
+  const query = (await searchParam);
   const params = {search : query || null}
   const session = await auth();
   console.log(session?.id);
@@ -39,9 +40,13 @@ export default async function Home({searchParam} : {
         </p>
         <ul className='mt-7 card_grid grid grid-cols-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 justify-center'>
         {
-           posts.map((post : ProjectTypeCard, index : number) => (
-             <ThreeDCardDemo />
-          ))
+          posts?.length > 0 ? (   
+            posts.map((post : ProjectTypeCard, index : number) => (
+            <ThreeDCardDemo key={post._id} />
+            ))
+          ) : (
+          <p className='no-results'>No Projects Found</p>
+          ) 
         }
         </ul>
       </section>
